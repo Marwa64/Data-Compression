@@ -133,7 +133,16 @@ public class GUI {
 							break;
 						}
 						case "Huffman": {
-							System.out.println("Hello!");
+							try {
+								if (Huffman.decompress(filePath, dirPath)) {
+									lblsuccess_decompress.setText("The file has been successfully decompressed!");
+								} else {
+									lblsuccess_decompress.setText("");
+								}
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 							break;
 						}
 					}
@@ -317,7 +326,16 @@ public class GUI {
 							break;
 						}
 						case "Huffman": {
-							System.out.println("Hello!");
+							try {
+								if (Huffman.compress(filePath, dirPath)) {
+									lblsuccess_compress.setText("The file has been successfully compressed!");
+								} else {
+									lblsuccess_compress.setText("");
+								}
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 							break;
 						}
 					}

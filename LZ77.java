@@ -60,7 +60,7 @@ public class LZ77 {
 		}
 
 	    try {
-	        FileWriter myWriter = new FileWriter(outputPath + "\\CompressedFile.txt");
+	        FileWriter myWriter = new FileWriter(outputPath + "\\CompressedFile_lZ77.txt");
 	        myWriter.write(output);
 	        myWriter.close();
 	        return true;
@@ -101,7 +101,7 @@ public class LZ77 {
         }
 
 	    try {
-	        FileWriter myWriter = new FileWriter(outputPath + "\\DecompressedFile.txt");
+	        FileWriter myWriter = new FileWriter(outputPath + "\\DecompressedFile_LZ77.txt");
 	        myWriter.write(output);
 	        myWriter.close();
 	        return true;
